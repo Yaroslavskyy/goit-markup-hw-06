@@ -53,6 +53,10 @@ a:focus {
   color: var(--color-dodger-blue);
 }
 
+img {
+  display: block;
+}
+
 ul {
   padding: 0;
   margin: 0;
@@ -137,6 +141,7 @@ section {
 }
 
 .section-banner-btn {
+  cursor: pointer;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
@@ -177,6 +182,7 @@ section {
 }
 
 .team-section {
+  max-width: 100%;
   background: var(--color-whisper);
   padding: 94px 0;
 }
@@ -224,6 +230,7 @@ section {
 /*---PORTFOLIO---*/
 
 .project-button-action {
+  cursor: pointer;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.6;
@@ -493,6 +500,7 @@ section {
 
 .social-link svg {
   fill: var(--color-Bombay);
+  transition: fill cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 
 .social-link:hover svg,
@@ -555,7 +563,7 @@ section {
 }
 
 .container-footer:not(:last-child) {
-  margin-right: 70px;
+  margin-right: 93px;
 }
 
 .container.footer-inline {
@@ -627,6 +635,7 @@ section {
   transform: scale(0);
 }
 .modal {
+  box-sizing: border-box;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -635,9 +644,11 @@ section {
   height: 581px;
   background-color: var(--color-white);
   border-radius: 4px;
+  padding: 40px;
 }
 
 .modal-close {
+  cursor: pointer;
   position: absolute;
   top: 8px;
   right: 8px;
@@ -681,9 +692,9 @@ section {
   transition: border-color cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 
-.footer-input-mail:hover, 
-  .footer-input-mail:focus {
-    border-color: rgba(255, 255, 255, 0.6);
+.footer-input-mail:hover,
+.footer-input-mail:focus {
+  border-color: rgba(255, 255, 255, 0.6);
 }
 
 .footer-input-mail::placeholder {
@@ -700,6 +711,7 @@ section {
 }
 
 .footer-button {
+  cursor: pointer;
   width: 200px;
   height: 50px;
   background: var(--color-dodger-blue);
@@ -714,7 +726,6 @@ section {
   border-color: var(--color-dodger-blue);
   padding: 10px 28px;
   box-sizing: border-box;
-
 }
 
 .footer-button span {
@@ -733,20 +744,16 @@ section {
   line-height: 1.15;
   text-align: center;
   color: var(--color-mine-shaft);
-  margin: 40px 40px 12px;
+  margin: 0 0 12px;
 }
 
 .container-footer.join-in {
-margin-right: 93px;
+  margin-right: 93px;
 }
 
-.form {
-  margin: 0 40px 40px 40px;
-}
 
 .form-field {
-  display: flex;
-  flex-direction: column;
+ 
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -754,12 +761,11 @@ margin-right: 93px;
   letter-spacing: 0.01em;
   color: var(--color-boulder);
   text-align: start;
-  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .form-field-textarea {
-  display: flex;
-  flex-direction: column;
+  
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -767,7 +773,7 @@ margin-right: 93px;
   letter-spacing: 0.01em;
   color: var(--color-boulder);
   text-align: start;
-  padding-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .form-textarea:hover,
@@ -779,7 +785,8 @@ margin-right: 93px;
 }
 
 .form-label {
-  padding-bottom: 4px;
+  display: block;
+  margin-bottom: 4px;
 }
 
 .form-input {
@@ -797,7 +804,6 @@ margin-right: 93px;
   border-color: var(--color-dodger-blue);
   outline: var(--color-dodger-blue);
   transition: border-color cubic-bezier(0.4, 0, 0.2, 1) 250ms;
-  
 }
 
 .form-input:hover + .form-icon,
@@ -807,14 +813,14 @@ margin-right: 93px;
 }
 
 .form-textarea {
+  display: block;
   font-family: "Roboto", sans-serif;
   box-sizing: border-box;
-  width: 448px;
+  width: 100%;
   height: 120px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   resize: none;
-  margin-bottom: 20px;
   padding: 12px 16px;
   font-size: 12px;
   line-height: 1.17;
@@ -869,7 +875,7 @@ margin-right: 93px;
 }
 
 .checkbox {
- display: none;
+  display: none;
 }
 
 .checkbox:checked + label .unchecked {
@@ -895,7 +901,12 @@ margin-right: 93px;
   transform: translateY(-50%);
 }
 
+.footer-input-inline {
+  display: flex;
+}
+
 .form-botton {
+  cursor: pointer;
   display: block;
   padding: 0;
   margin: 0 auto;
